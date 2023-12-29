@@ -1,0 +1,2271 @@
+/* line 37, ../../../Desktop/Igorevna/sass/_base.sass */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 43, ../../../Desktop/Igorevna/sass/_base.sass */
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 1250px) {
+  /* line 43, ../../../Desktop/Igorevna/sass/_base.sass */
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 43, ../../../Desktop/Igorevna/sass/_base.sass */
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (max-width: 597px) {
+  /* line 43, ../../../Desktop/Igorevna/sass/_base.sass */
+  html {
+    font-size: 35%;
+  }
+}
+
+/* line 51, ../../../Desktop/Igorevna/sass/_base.sass */
+body {
+  font-size: 1.6rem;
+  font-family: "Merriweather", serif;
+}
+
+/* line 56, ../../../Desktop/Igorevna/sass/_base.sass */
+.containers {
+  display: grid;
+  grid-template-rows: 90vh min-content repeat(4, min-content) min-content min-content;
+  grid-template-columns: minmax(6rem, 1fr) repeat(9, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+  grid-template-columns: minmax(6rem, 1fr) repeat(9, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+}
+
+@media only screen and (max-width: 1250px) {
+  /* line 56, ../../../Desktop/Igorevna/sass/_base.sass */
+  .containers {
+    grid-template-rows: 40vh min-content repeat(4, min-content) min-content min-content;
+  }
+}
+
+/* line 1, ../../../Desktop/Igorevna/sass/_header.sass */
+.header {
+  background: linear-gradient(117deg, rgba(14, 10, 4, 0.51145) 100%, rgba(255, 255, 255, 0.799965) 100%), url(../img/BG_fon.jpg) center/cover no-repeat;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+}
+
+/* line 10, ../../../Desktop/Igorevna/sass/_header.sass */
+.logo-nav {
+  width: 17rem;
+  height: 17rem;
+  transition: all .2s;
+}
+
+/* line 14, ../../../Desktop/Igorevna/sass/_header.sass */
+.logo-nav:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 10, ../../../Desktop/Igorevna/sass/_header.sass */
+  .logo-nav {
+    width: 14rem;
+    height: 14rem;
+  }
+}
+
+/* line 22, ../../../Desktop/Igorevna/sass/_header.sass */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 7.3rem min-content;
+  background-color: #c5a0a054;
+  margin-bottom: 18rem;
+  z-index: 5;
+}
+
+/* line 36, ../../../Desktop/Igorevna/sass/_header.sass */
+.nav__logo {
+  width: 14rem;
+  height: 7rem;
+  text-align: center;
+  padding: .5rem;
+  grid-column: 2 / 3;
+  margin-right: 4rem;
+}
+
+/* line 48, ../../../Desktop/Igorevna/sass/_header.sass */
+.nav__logo-text {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: .5rem;
+}
+
+/* line 59, ../../../Desktop/Igorevna/sass/_header.sass */
+.nav__box {
+  display: flex;
+  list-style: none;
+  grid-gap: 3rem;
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 597px) {
+  /* line 59, ../../../Desktop/Igorevna/sass/_header.sass */
+  .nav__box {
+    display: none;
+  }
+}
+
+/* line 68, ../../../Desktop/Igorevna/sass/_header.sass */
+.nav__link:link, .nav__link:visited {
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: .3s all;
+  display: inline-block;
+}
+
+/* line 77, ../../../Desktop/Igorevna/sass/_header.sass */
+.nav__link:hover, .nav__link:active {
+  color: #fdc501;
+  transform: translateY(-0.3rem);
+}
+
+/* line 81, ../../../Desktop/Igorevna/sass/_header.sass */
+.nav__border {
+  border-right: .1rem solid;
+  color: #ffffff;
+  text-align: center;
+  margin-right: 4rem;
+}
+
+@media screen and (max-width: 597px) {
+  /* line 81, ../../../Desktop/Igorevna/sass/_header.sass */
+  .nav__border {
+    display: none;
+  }
+}
+
+/* line 89, ../../../Desktop/Igorevna/sass/_header.sass */
+.header > h1 {
+  margin-top: 30rem;
+}
+
+/* line 94, ../../../Desktop/Igorevna/sass/_header.sass */
+.burger {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  display: none;
+}
+
+@media screen and (max-width: 597px) {
+  /* line 94, ../../../Desktop/Igorevna/sass/_header.sass */
+  .burger {
+    display: block;
+  }
+}
+
+/* line 101, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu {
+  border-radius: 1rem;
+  list-style: none;
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 2.5rem;
+  left: -1rem;
+  margin-top: 5.2rem;
+  padding: 1rem;
+  clear: both;
+  background: var(--background-navbar);
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  transform: scale(1, 0);
+  transform-origin: top;
+  background-color: #5b4545dd;
+}
+
+/* Hamburger menu button */
+/* line 119, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu-btn:checked ~ .menu {
+  transform: scale(1, 1);
+  transform-origin: top;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+/* Hamburger menbu text */
+/* line 126, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu a {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: .2rem;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #ddd;
+  opacity: 0;
+  transition: all .5s ease out;
+}
+
+/* line 136, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu a:hover {
+  color: #fdc501;
+}
+
+/* line 144, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu-btn:checked ~ .menu a,
+.menu-btn:checked ~ .menu li {
+  opacity: 1;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+}
+
+/* line 150, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu-btn {
+  display: none;
+}
+
+/* line 154, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu-icon {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  padding: 2.4rem 1.4rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 163, ../../../Desktop/Igorevna/sass/_header.sass */
+.navicon {
+  background: #ddd;
+  display: block;
+  height: .5rem;
+  width: 5rem;
+  position: relative;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+/* line 172, ../../../Desktop/Igorevna/sass/_header.sass */
+.navicon:before,
+.navicon:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #ddd;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+/* line 183, ../../../Desktop/Igorevna/sass/_header.sass */
+.navicon:before {
+  top: 1.5rem;
+}
+
+/* line 187, ../../../Desktop/Igorevna/sass/_header.sass */
+.navicon:after {
+  bottom: 1.5rem;
+}
+
+/* Hamburger Menu Animation Start */
+/* line 192, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+/* line 196, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+/* line 200, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
+  top: 0;
+}
+
+/* line 203, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  bottom: 0;
+}
+
+/* line 207, ../../../Desktop/Igorevna/sass/_header.sass */
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+/* Hamburger Menu Animation End */
+/* Navbar Container */
+/* line 214, ../../../Desktop/Igorevna/sass/_header.sass */
+.navtext-container {
+  width: 100%;
+  height: 5.2rem;
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar Text */
+/* line 225, ../../../Desktop/Igorevna/sass/_header.sass */
+.navtext {
+  position: absolute;
+  text-transform: uppercase;
+  color: #ddd;
+  letter-spacing: .4rem;
+  font-size: 2rem;
+}
+
+/* line 1, ../../../Desktop/Igorevna/sass/_text-info.sass */
+.text-info {
+  background-color: #12151B;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+}
+
+/* line 7, ../../../Desktop/Igorevna/sass/_text-info.sass */
+.line-anime {
+  display: inline;
+}
+
+/* line 10, ../../../Desktop/Igorevna/sass/_text-info.sass */
+.line-anime::after {
+  content: "";
+  display: block;
+  height: .3rem;
+  width: 1rem;
+  background: grey;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+/* line 19, ../../../Desktop/Igorevna/sass/_text-info.sass */
+.line-anime:hover::after {
+  content: "";
+  width: 80%;
+  background: #fdc501;
+}
+
+/* line 1, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#gallery {
+  background-color: #111417;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(4, min-content);
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 1, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  #gallery {
+    grid-template-rows: repeat(6, min-content);
+  }
+}
+
+/* line 11, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.open-popup {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 4rem;
+}
+
+/* line 28, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-1 {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 28, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-1 {
+    grid-column: 2 / 6;
+    grid-row: 1 / 3;
+  }
+}
+
+/* line 36, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-1__img {
+  width: 31rem;
+  height: 31rem;
+  transition: all 1s;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 36, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-1__img {
+    width: 100%;
+    height: 50rem;
+  }
+}
+
+/* line 43, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-1__text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-70%, -40%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+}
+
+/* line 57, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-1__span {
+  color: yellow;
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 62, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-1:hover .items-1__text {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* line 65, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-1:hover .items-1__img {
+  transform: scale(1.1);
+  filter: brightness(40%);
+}
+
+/* line 70, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(24, 24, 24, 0.597);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 80, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 84, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.popup-inner {
+  position: relative;
+  top: 10%;
+  left: 31%;
+  transform: translate(-50%);
+  background: #fff;
+  max-width: 55rem;
+  height: 55rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  grid-gap: 2rem;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -ms-transform: scale(0);
+  transition: all .5s ease;
+}
+
+@media only screen and (max-width: 1250px) {
+  /* line 84, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .popup-inner {
+    position: relative;
+    top: 4%;
+    left: 31%;
+    transform: translate(-50%);
+  }
+}
+
+@media screen and (max-width: 597px) {
+  /* line 84, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .popup-inner {
+    position: relative;
+    top: 4%;
+    left: 17%;
+    transform: translateX();
+  }
+}
+
+/* line 112, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.popup-img {
+  width: 100%;
+  height: 45rem;
+}
+
+/* line 116, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup:target .popup-inner {
+  transform: scale(1);
+}
+
+/* line 120, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.text-popup {
+  margin-bottom: 1rem;
+}
+
+/* line 122, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.btn-popup {
+  position: relative;
+  background-color: #fdc501;
+  width: 100%;
+  grid-gap: .1rem;
+}
+
+/* line 128, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup {
+  font-size: 1.4rem;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  width: 50%;
+  text-align: center;
+  display: block;
+  float: left;
+  transition: all .4s ease-in-out;
+  border-right: 0.1rem solid rgba(219, 215, 189, 0.668);
+  letter-spacing: .3rem;
+}
+
+/* line 143, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 149, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup {
+  display: block;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  transition: all .4s ease-in-out;
+  letter-spacing: .3rem;
+}
+
+/* line 161, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 171, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-2 {
+  grid-column: 4 / 6;
+  grid-row: 1 / 2;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 171, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-2 {
+    grid-column: 6 / 10;
+    grid-row: 1 / 3;
+  }
+}
+
+/* line 180, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-2__img {
+  height: 31rem;
+  width: 31rem;
+  transition: all 1s;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 180, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-2__img {
+    height: 50rem;
+    width: 100%;
+  }
+}
+
+/* line 187, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-2__text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-70%, -40%);
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+}
+
+/* line 202, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-2__span {
+  color: yellow;
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 207, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-2:hover .items-2__text {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* line 210, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-2:hover .items-2__img {
+  transform: scale(1.1);
+  filter: brightness(40%);
+}
+
+/* line 214, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup2 {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(24, 24, 24, 0.597);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 224, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup2:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 229, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.popup-img2 {
+  width: 100%;
+  height: 35rem;
+}
+
+/* line 232, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup2:target .popup-inner {
+  transform: scale(1);
+}
+
+/* line 238, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.btn-popup {
+  position: relative;
+  background-color: #fdc501;
+  width: 100%;
+  grid-gap: .1rem;
+}
+
+/* line 244, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup {
+  font-size: 1.4rem;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  width: 50%;
+  text-align: center;
+  display: block;
+  float: left;
+  transition: all .4s ease-in-out;
+  border-right: 0.1rem solid rgba(219, 215, 189, 0.668);
+  letter-spacing: .3rem;
+}
+
+/* line 259, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 265, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup {
+  display: block;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  transition: all .4s ease-in-out;
+  letter-spacing: .3rem;
+}
+
+/* line 277, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 283, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-3 {
+  grid-column: 6 / 8;
+  grid-row: 1 / 2;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 283, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-3 {
+    grid-column: 2 / 6;
+    grid-row: 3 / 4;
+  }
+}
+
+/* line 291, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-3__img {
+  height: 31rem;
+  width: 31rem;
+  transition: all 1s;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 291, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-3__img {
+    height: 50rem;
+    width: 100%;
+  }
+}
+
+/* line 300, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-3__text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-70%, -40%);
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+}
+
+/* line 315, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-3__span {
+  color: yellow;
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 320, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-3:hover .items-3__text {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* line 323, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-3:hover .items-3__img {
+  transform: scale(1.1);
+  filter: brightness(40%);
+}
+
+/* line 327, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup3 {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(24, 24, 24, 0.597);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 337, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup3:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 342, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.popup-img3 {
+  width: 100%;
+  height: 35rem;
+}
+
+/* line 346, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup3:target .popup-inner {
+  transform: scale(1);
+}
+
+/* line 350, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.text-popup {
+  padding: .5rem;
+  margin-bottom: 1rem;
+}
+
+/* line 353, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.btn-popup {
+  position: relative;
+  background-color: #fdc501;
+  width: 100%;
+  grid-gap: .1rem;
+}
+
+/* line 359, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup {
+  font-size: 1.4rem;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  width: 50%;
+  text-align: center;
+  display: block;
+  float: left;
+  transition: all .4s ease-in-out;
+  border-right: 0.1rem solid rgba(219, 215, 189, 0.668);
+  letter-spacing: .3rem;
+}
+
+/* line 374, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 380, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup {
+  display: block;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  transition: all .4s ease-in-out;
+  letter-spacing: .3rem;
+}
+
+/* line 392, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 399, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-4 {
+  grid-column: 8 / 10;
+  grid-row: 1 / 2;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 399, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-4 {
+    grid-column: 6 / 10;
+    grid-row: 3 / 4;
+  }
+}
+
+/* line 407, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-4__img {
+  height: 31rem;
+  width: 31rem;
+  transition: all 1s;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 407, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-4__img {
+    height: 50rem;
+    width: 100%;
+  }
+}
+
+/* line 416, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-4__text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-70%, -40%);
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: white;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+}
+
+/* line 431, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-4__span {
+  color: yellow;
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 440, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-4:hover .items-4__text {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* line 443, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-4:hover .items-4__img {
+  transform: scale(1.1);
+  filter: brightness(40%);
+}
+
+/* line 447, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup4 {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(24, 24, 24, 0.597);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 457, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup4:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 462, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.popup-img4 {
+  width: 100%;
+  height: 35rem;
+}
+
+/* line 466, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup4:target .popup-inner {
+  transform: scale(1);
+}
+
+/* line 470, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.text-popup {
+  margin-bottom: 1rem;
+}
+
+/* line 472, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.btn-popup {
+  position: relative;
+  background-color: #fdc501;
+  width: 100%;
+  grid-gap: .1rem;
+}
+
+/* line 478, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup {
+  font-size: 1.4rem;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  width: 50%;
+  text-align: center;
+  display: block;
+  float: left;
+  transition: all .4s ease-in-out;
+  border-right: 0.1rem solid rgba(219, 215, 189, 0.668);
+  letter-spacing: .3rem;
+}
+
+/* line 493, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 499, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup {
+  display: block;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  transition: all .4s ease-in-out;
+  letter-spacing: .3rem;
+}
+
+/* line 511, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 518, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-5 {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 518, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-5 {
+    grid-column: 2 / 6;
+    grid-row: 4 / 5;
+  }
+}
+
+/* line 526, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-5__img {
+  width: 31rem;
+  height: 31rem;
+  transition: all 1s;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 526, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-5__img {
+    height: 50rem;
+    width: 100%;
+  }
+}
+
+/* line 533, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-5__text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-70%, -40%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+}
+
+/* line 547, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-5__span {
+  color: yellow;
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 552, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-5:hover .items-5__text {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* line 555, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-5:hover .items-5__img {
+  transform: scale(1.1);
+  filter: brightness(40%);
+}
+
+/* line 560, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup5 {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(24, 24, 24, 0.597);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 570, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup5:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 575, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.popup-img {
+  width: 100%;
+  height: 40rem;
+}
+
+/* line 579, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup5:target .popup-inner {
+  transform: scale(1);
+}
+
+/* line 583, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.text-popup {
+  margin-bottom: 1rem;
+}
+
+/* line 585, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.btn-popup {
+  position: relative;
+  background-color: #fdc501;
+  width: 100%;
+  grid-gap: .1rem;
+}
+
+/* line 591, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup {
+  font-size: 1.4rem;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  width: 50%;
+  text-align: center;
+  display: block;
+  float: left;
+  transition: all .4s ease-in-out;
+  border-right: 0.1rem solid rgba(219, 215, 189, 0.668);
+  letter-spacing: .3rem;
+}
+
+/* line 606, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 612, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup {
+  display: block;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  transition: all .4s ease-in-out;
+  letter-spacing: .3rem;
+}
+
+/* line 624, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 630, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-6 {
+  grid-column: 4 / 6;
+  grid-row: 2 / 3;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 630, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-6 {
+    grid-column: 6 / 10;
+    grid-row: 4 / 5;
+  }
+}
+
+/* line 638, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-6__img {
+  width: 31rem;
+  height: 31rem;
+  transition: all 1s;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 638, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-6__img {
+    height: 50rem;
+    width: 100%;
+  }
+}
+
+/* line 645, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-6__text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-70%, -40%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+}
+
+/* line 659, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-6__span {
+  color: yellow;
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 664, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-6:hover .items-6__text {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* line 667, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-6:hover .items-6__img {
+  transform: scale(1.1);
+  filter: brightness(40%);
+}
+
+/* line 671, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup6 {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(24, 24, 24, 0.597);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 681, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup6:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 686, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.popup-img {
+  width: 100%;
+  height: 40rem;
+}
+
+/* line 690, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup6:target .popup-inner {
+  transform: scale(1);
+}
+
+/* line 694, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.text-popup {
+  margin-bottom: 1rem;
+}
+
+/* line 696, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.btn-popup {
+  position: relative;
+  background-color: #fdc501;
+  width: 100%;
+  grid-gap: .1rem;
+}
+
+/* line 702, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup {
+  font-size: 1.4rem;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  width: 50%;
+  text-align: center;
+  display: block;
+  float: left;
+  transition: all .4s ease-in-out;
+  border-right: 0.1rem solid rgba(219, 215, 189, 0.668);
+  letter-spacing: .3rem;
+}
+
+/* line 717, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 723, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup {
+  display: block;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  transition: all .4s ease-in-out;
+  letter-spacing: .3rem;
+}
+
+/* line 735, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 741, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-7 {
+  grid-column: 6 / 8;
+  grid-row: 2 / 3;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 741, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-7 {
+    grid-column: 2 / 6;
+    grid-row: 5 / -1;
+  }
+}
+
+/* line 749, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-7__img {
+  width: 31rem;
+  height: 31rem;
+  transition: all 1s;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 749, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-7__img {
+    height: 50rem;
+    width: 100%;
+  }
+}
+
+/* line 756, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-7__text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-70%, -40%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+}
+
+/* line 770, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-7__span {
+  color: yellow;
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 775, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-7:hover .items-7__text {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* line 778, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-7:hover .items-7__img {
+  transform: scale(1.1);
+  filter: brightness(40%);
+}
+
+/* line 782, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup7 {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(24, 24, 24, 0.597);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 792, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup7:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 797, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.popup-img7 {
+  width: 100%;
+  height: 35rem;
+}
+
+/* line 801, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup7:target .popup-inner {
+  transform: scale(1);
+}
+
+/* line 805, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.text-popup {
+  margin-bottom: 1rem;
+}
+
+/* line 807, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.btn-popup {
+  position: relative;
+  background-color: #fdc501;
+  width: 100%;
+  grid-gap: .1rem;
+}
+
+/* line 813, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup {
+  font-size: 1.4rem;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  width: 50%;
+  text-align: center;
+  display: block;
+  float: left;
+  transition: all .4s ease-in-out;
+  border-right: 0.1rem solid rgba(219, 215, 189, 0.668);
+  letter-spacing: .3rem;
+}
+
+/* line 828, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 834, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup {
+  display: block;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  transition: all .4s ease-in-out;
+  letter-spacing: .3rem;
+}
+
+/* line 846, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 852, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-8 {
+  grid-column: 8 / 10;
+  grid-row: 2 / 3;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 852, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-8 {
+    grid-column: 6 / 10;
+    grid-row: 5 / -1;
+  }
+}
+
+/* line 860, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-8__img {
+  width: 31rem;
+  height: 31rem;
+  transition: all 1s;
+}
+
+@media only screen and (max-width: 873px) {
+  /* line 860, ../../../Desktop/Igorevna/sass/_gallery.sass */
+  .items-8__img {
+    height: 50rem;
+    width: 100%;
+  }
+}
+
+/* line 867, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-8__text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-70%, -40%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+}
+
+/* line 881, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-8__span {
+  color: yellow;
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 886, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-8:hover .items-8__text {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* line 889, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.items-8:hover .items-8__img {
+  transform: scale(1.1);
+  filter: brightness(40%);
+}
+
+/* line 893, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup8 {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(24, 24, 24, 0.597);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 903, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup8:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 908, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.popup-img8 {
+  width: 100%;
+  height: 35rem;
+}
+
+/* line 912, ../../../Desktop/Igorevna/sass/_gallery.sass */
+#popup8:target .popup-inner {
+  transform: scale(1);
+}
+
+/* line 916, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.text-popup {
+  margin-bottom: 1rem;
+}
+
+/* line 918, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.btn-popup {
+  position: relative;
+  background-color: #fdc501;
+  width: 100%;
+  grid-gap: .1rem;
+}
+
+/* line 924, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup {
+  font-size: 1.4rem;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  width: 50%;
+  text-align: center;
+  display: block;
+  float: left;
+  transition: all .4s ease-in-out;
+  border-right: 0.1rem solid rgba(219, 215, 189, 0.668);
+  letter-spacing: .3rem;
+}
+
+/* line 939, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.details-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 945, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup {
+  display: block;
+  padding: 2.2rem;
+  background-color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  transition: all .4s ease-in-out;
+  letter-spacing: .3rem;
+}
+
+/* line 957, ../../../Desktop/Igorevna/sass/_gallery.sass */
+.close-popup:hover {
+  color: #000000;
+  cursor: pointer;
+  background-color: #fdc501;
+  transition: all .5s ease-in-out;
+}
+
+/* line 1, ../../../Desktop/Igorevna/sass/_description.sass */
+.description {
+  background-color: #12151B;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+}
+
+/* line 1, ../../../Desktop/Igorevna/sass/_cards.sass */
+.cards {
+  background-color: #111417;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  column-gap: 3rem;
+  position: relative;
+}
+
+/* line 18, ../../../Desktop/Igorevna/sass/_cards.sass */
+.cards__tittle-2 {
+  grid-column: 1 / -1;
+  font-size: 1.8rem;
+  color: #fff;
+  text-transform: none;
+  margin: 10rem 0 4rem 15rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 26, ../../../Desktop/Igorevna/sass/_cards.sass */
+.mask {
+  background: rgba(253, 197, 1, 0.5);
+  width: 21.1rem;
+  height: 22.5rem;
+  position: absolute;
+  top: 1%;
+  left: 4%;
+  opacity: 0;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  transition: opacity 0.6s ease-in-out;
+}
+
+@media screen and (max-width: 597px) {
+  /* line 26, ../../../Desktop/Igorevna/sass/_cards.sass */
+  .mask {
+    position: absolute;
+    top: .7rem;
+    left: .8rem;
+  }
+}
+
+/* line 45, ../../../Desktop/Igorevna/sass/_cards.sass */
+.mask:hover {
+  filter: alpha(opacity=100);
+  opacity: 1;
+  overflow: hidden;
+}
+
+/* line 50, ../../../Desktop/Igorevna/sass/_cards.sass */
+.box {
+  position: relative;
+  grid-column: 2 / 3;
+}
+
+@media only screen and (max-width: 680px) {
+  /* line 50, ../../../Desktop/Igorevna/sass/_cards.sass */
+  .box {
+    grid-column: 2 / -1;
+  }
+}
+
+/* line 57, ../../../Desktop/Igorevna/sass/_cards.sass */
+.box__img {
+  width: 100%;
+  height: 24rem;
+  display: block;
+  width: 23rem;
+  padding: 1rem;
+}
+
+/* line 66, ../../../Desktop/Igorevna/sass/_cards.sass */
+.box-1 {
+  position: relative;
+  grid-column: 3 / 4;
+}
+
+@media only screen and (max-width: 680px) {
+  /* line 66, ../../../Desktop/Igorevna/sass/_cards.sass */
+  .box-1 {
+    grid-column: 2 / -1;
+  }
+}
+
+/* line 72, ../../../Desktop/Igorevna/sass/_cards.sass */
+.box-1__img {
+  width: 100%;
+  height: 24rem;
+  display: block;
+  width: 23rem;
+  padding: 1rem;
+}
+
+/* line 80, ../../../Desktop/Igorevna/sass/_cards.sass */
+.box-2 {
+  position: relative;
+  grid-column: 4 / 5;
+}
+
+@media only screen and (max-width: 680px) {
+  /* line 80, ../../../Desktop/Igorevna/sass/_cards.sass */
+  .box-2 {
+    grid-column: 2 / -1;
+  }
+}
+
+/* line 86, ../../../Desktop/Igorevna/sass/_cards.sass */
+.box-2__img {
+  width: 100%;
+  height: 24rem;
+  display: block;
+  width: 23rem;
+  padding: 1rem;
+}
+
+/* line 94, ../../../Desktop/Igorevna/sass/_cards.sass */
+.box-3 {
+  position: relative;
+  grid-column: 5 / 6;
+}
+
+@media only screen and (max-width: 680px) {
+  /* line 94, ../../../Desktop/Igorevna/sass/_cards.sass */
+  .box-3 {
+    grid-column: 2 / -1;
+  }
+}
+
+/* line 100, ../../../Desktop/Igorevna/sass/_cards.sass */
+.box-3__img {
+  width: 100%;
+  height: 24rem;
+  display: block;
+  width: 23rem;
+  padding: 1rem;
+}
+
+/* line 109, ../../../Desktop/Igorevna/sass/_cards.sass */
+.text {
+  color: #575859;
+  font-size: 1.6rem;
+  font-family: "Merriweather", serif;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 597px) {
+  /* line 109, ../../../Desktop/Igorevna/sass/_cards.sass */
+  .text {
+    margin-right: .5rem;
+  }
+}
+
+/* line 120, ../../../Desktop/Igorevna/sass/_cards.sass */
+.link {
+  color: #fff;
+  margin: 0 3rem 3rem 0;
+  margin-bottom: 5rem;
+}
+
+/* line 1, ../../../Desktop/Igorevna/sass/_animation.sass */
+.animation {
+  background-color: #fdc501;
+  grid-column: 1 / -1;
+  display: grid;
+}
+
+/* line 6, ../../../Desktop/Igorevna/sass/_animation.sass */
+.slide {
+  width: 85rem;
+  margin: 0 auto;
+}
+
+/* line 10, ../../../Desktop/Igorevna/sass/_animation.sass */
+.title {
+  font-size: 2.5rem;
+  font-family: "Merriweather", serif;
+  color: #fff;
+  text-shadow: 0 0.1rem, 0.1rem rgba(17, 13, 13, 0.3);
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+/* line 18, ../../../Desktop/Igorevna/sass/_animation.sass */
+.d-block {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 0.5rem solid #fff;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+/* line 26, ../../../Desktop/Igorevna/sass/_animation.sass */
+.carousel-item active {
+  position: relative;
+}
+
+/* line 29, ../../../Desktop/Igorevna/sass/_animation.sass */
+.name {
+  display: inline-block;
+  position: absolute;
+  bottom: -3%;
+  right: 35%;
+  width: 14rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: .2rem;
+  transform: translate(56%, -120%);
+}
+
+/* line 43, ../../../Desktop/Igorevna/sass/_animation.sass */
+.info {
+  color: #00000099;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+/* line 1, ../../../Desktop/Igorevna/sass/_forma.sass */
+.forms {
+  display: grid;
+  background-color: #12151B;
+  padding-top: 10rem;
+  grid-column: 1 / 7;
+}
+
+/* line 9, ../../../Desktop/Igorevna/sass/_forma.sass */
+.line-anime-1 {
+  display: inline;
+}
+
+/* line 13, ../../../Desktop/Igorevna/sass/_forma.sass */
+.line-anime-1::after {
+  content: "";
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  margin-left: 4rem;
+  display: block;
+  height: .3rem;
+  width: 11rem;
+  background: #283436;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+/* line 25, ../../../Desktop/Igorevna/sass/_forma.sass */
+.line-anime-1:hover::after {
+  content: "";
+  width: 20%;
+  background: #fdc501;
+}
+
+/* line 30, ../../../Desktop/Igorevna/sass/_forma.sass */
+.form {
+  margin-left: 20rem;
+  grid-gap: 4rem;
+  border: none;
+}
+
+@media only screen and (max-width: 680px) {
+  /* line 30, ../../../Desktop/Igorevna/sass/_forma.sass */
+  .form {
+    margin-left: 1rem;
+  }
+}
+
+/* line 37, ../../../Desktop/Igorevna/sass/_forma.sass */
+.form__input {
+  margin-bottom: 4rem;
+  width: 90%;
+  background: #42414193;
+  border: 0;
+  padding: 1.8rem 2rem;
+  border-radius: .3rem;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+/* line 47, ../../../Desktop/Igorevna/sass/_forma.sass */
+.form__input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+/* line 50, ../../../Desktop/Igorevna/sass/_forma.sass */
+.textarea {
+  resize: vertical;
+}
+
+/* line 53, ../../../Desktop/Igorevna/sass/_forma.sass */
+.btn {
+  width: 90%;
+  border-radius: .3rem;
+  background-color: #fdc501;
+  color: #000000;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 10rem;
+}
+
+/* line 66, ../../../Desktop/Igorevna/sass/_forma.sass */
+.btn:hover {
+  background-color: #e65112;
+}
+
+/* line 72, ../../../Desktop/Igorevna/sass/_forma.sass */
+.forms-text {
+  background-color: #12151B;
+  grid-column: 7 / -1;
+  display: grid;
+  grid-template-rows: repeat(5, min-content);
+  padding-top: 20rem;
+}
+
+/* line 78, ../../../Desktop/Igorevna/sass/_forma.sass */
+.text-form {
+  color: #575859;
+  font-size: 2rem;
+  font-family: "Merriweather", serif;
+  margin-bottom: 3rem;
+}
+
+/* line 84, ../../../Desktop/Igorevna/sass/_forma.sass */
+.adress {
+  color: #575859;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+/* line 1, ../../../Desktop/Igorevna/sass/_footer.sass */
+.footer {
+  background-color: #0a0b13;
+  grid-column: 1 / -1;
+  grid-template-rows: repeat(5 min-content);
+  display: grid;
+}
+
+/* line 8, ../../../Desktop/Igorevna/sass/_footer.sass */
+.footer__icon {
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  margin-top: 10rem;
+}
+
+/* line 14, ../../../Desktop/Igorevna/sass/_footer.sass */
+.footer__line {
+  border: .1rem solid;
+  color: #302e2ecf;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+/* line 21, ../../../Desktop/Igorevna/sass/_footer.sass */
+.footer__link {
+  font-size: 3.8rem;
+  color: #302e2ecf;
+  margin-right: 2.5rem;
+}
+
+/* line 25, ../../../Desktop/Igorevna/sass/_footer.sass */
+.footer__link:last-child {
+  margin: 0;
+}
+
+/* line 27, ../../../Desktop/Igorevna/sass/_footer.sass */
+.footer__link:hover {
+  color: #fff;
+}
+
+/* line 30, ../../../Desktop/Igorevna/sass/_footer.sass */
+.footer__logo {
+  display: block;
+  color: #fdc501;
+  font-size: 3rem;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: .5rem;
+}
+
+/* line 40, ../../../Desktop/Igorevna/sass/_footer.sass */
+.footer__text {
+  display: block;
+  text-align: center;
+  color: #676565cf;
+  font-family: "Merriweather", serif;
+  font-size: 1.6rem;
+  margin-bottom: 10rem;
+}
+
+/* line 48, ../../../Desktop/Igorevna/sass/_footer.sass */
+.footer__info {
+  color: #676565cf;
+  font-size: 1.4rem;
+  font-family: "Raleway", sans-serif;
+  display: grid;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+/* line 1, ../../../Desktop/Igorevna/sass/_typography.sass */
+.tittle-1 {
+  font-size: 4.9rem;
+  text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+/* line 5, ../../../Desktop/Igorevna/sass/_typography.sass */
+.tittle-1__main {
+  display: block;
+  animation: ToptoBottom;
+  animation-duration: 1.5s;
+}
+
+/* line 9, ../../../Desktop/Igorevna/sass/_typography.sass */
+.tittle-1__line {
+  display: block;
+  border-bottom: .3rem solid;
+  color: #fdc501;
+  margin: 2rem 0 3rem 0;
+  width: 14rem;
+}
+
+/* line 16, ../../../Desktop/Igorevna/sass/_typography.sass */
+.tittle-2 {
+  font-size: 2.5rem;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  margin: 20rem 0 5rem 15rem;
+}
+
+/* line 24, ../../../Desktop/Igorevna/sass/_typography.sass */
+.tittle-3 {
+  font-size: 2rem;
+  color: #646060e6;
+  letter-spacing: .2rem;
+  margin-bottom: 11rem;
+}
+
+/* line 31, ../../../Desktop/Igorevna/sass/_typography.sass */
+.tittle-3__first {
+  display: block;
+  animation: BottomtoTop;
+  animation-duration: 1.5s;
+}
+
+/* line 36, ../../../Desktop/Igorevna/sass/_typography.sass */
+.tittle-4 {
+  font-size: 1.8rem;
+  color: #fdc501;
+  text-transform: none;
+  margin-bottom: .6rem;
+  margin-top: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 44, ../../../Desktop/Igorevna/sass/_typography.sass */
+.tittle-5 {
+  color: #fff;
+  font-family: "Merriweather", serif;
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+}
+
+/* line 50, ../../../Desktop/Igorevna/sass/_typography.sass */
+.tittle-6 {
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  margin-left: 4rem;
+}
+
+/* line 56, ../../../Desktop/Igorevna/sass/_typography.sass */
+.dot {
+  color: #fdc501;
+}
+
+/* line 59, ../../../Desktop/Igorevna/sass/_typography.sass */
+.line-anime {
+  display: inline;
+}
+
+/* line 63, ../../../Desktop/Igorevna/sass/_typography.sass */
+.line-anime::after {
+  content: "";
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  display: block;
+  height: .3rem;
+  width: 14rem;
+  background: #283436;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+/* line 74, ../../../Desktop/Igorevna/sass/_typography.sass */
+.line-anime:hover::after {
+  content: "";
+  width: 25%;
+  background: #fdc501;
+}
+
+/* line 80, ../../../Desktop/Igorevna/sass/_typography.sass */
+.margin-left-200 {
+  margin-left: 15rem;
+}
+
+/* line 83, ../../../Desktop/Igorevna/sass/_typography.sass */
+.margin-bottom-30 {
+  margin-bottom: 3rem;
+}
+
+@keyframes ToptoBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-30rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes BottomtoTop {
+  0% {
+    opacity: 0;
+    transform: translateY(15rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+/* line 1, ../../../Desktop/Igorevna/sass/_about.sass */
+.about {
+  background-color: #12151B;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  padding: 0 20rem 0 20rem;
+  grid-gap: 5rem 2rem;
+}
+
+/* line 9, ../../../Desktop/Igorevna/sass/_about.sass */
+.about__text {
+  font-size: 1.6rem;
+  color: #575859;
+}
+
+/* line 13, ../../../Desktop/Igorevna/sass/_about.sass */
+.about__box {
+  height: 24rem;
+}
+
+/*# sourceMappingURL=style.css.map */

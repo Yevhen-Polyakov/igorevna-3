@@ -1,0 +1,87 @@
+.forms
+    display: grid
+    background-color: $color-blue-dark
+    padding-top: 10rem 
+    grid-column: 1 / 7
+    
+        
+   
+.line-anime-1
+    display: inline
+    
+
+.line-anime-1::after
+    content: ""
+    margin-top: 3rem
+    margin-bottom: 4rem
+    margin-left: 4rem
+    display: block
+    height: .3rem
+    width: 11rem
+    background: #283436
+    transition: width .5s ease, background-color .5s ease
+
+
+.line-anime-1:hover::after
+    content: ""
+    width: 20%
+    background: $color-yellow
+
+.form
+    
+    margin-left: 20rem
+    grid-gap: 4rem
+    border: none
+    @include respond (phone)
+        margin-left: 1rem
+    &__input
+        
+        margin-bottom: 4rem
+        width: 90%
+        background: #42414193
+        border: 0
+        padding: 1.8rem 2rem
+        border-radius: .3rem
+        color: $color-black
+        font-size: 1.5rem  
+        &:focus
+            outline: none
+            background-color: $color-white
+.textarea
+    resize: vertical          
+
+.btn
+    width: 90%
+    border-radius: .3rem
+    background-color: $color-yellow
+    color: $color-black
+    border: none
+    text-transform: uppercase
+    letter-spacing: .1rem
+    font-weight: bold
+    padding: 2rem
+    font-size: 1.5rem
+    cursor: pointer
+    margin-bottom: 10rem
+    &:hover
+        background-color: $color-orange-red
+
+
+
+//2-я часть блока
+.forms-text
+        background-color: $color-blue-dark
+        grid-column: 7 / -1 
+        display: grid
+        grid-template-rows: repeat(5, min-content)
+        padding-top: 20rem
+.text-form
+    color: $color-gray
+    font-size: 2rem
+    font-family: $font-marriwether
+    margin-bottom: 3rem
+    
+.adress
+    color: $color-gray
+    line-height: 3rem
+    font-weight: bold

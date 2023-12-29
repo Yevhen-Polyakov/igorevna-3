@@ -1,0 +1,966 @@
+#gallery
+    background-color: #111417
+    grid-column: 1 / -1
+    display: grid
+    grid-template-columns: repeat(10, 1fr)
+    grid-template-rows: repeat(4, min-content)
+    @include respond (tab-port)
+           
+        grid-template-rows: repeat(6, min-content)
+
+.open-popup
+    display: block
+    color: $color-white
+    text-decoration: none
+    font-size: 4rem
+
+// model window-1, start
+
+
+                
+//model window end                
+        
+               
+                
+
+    
+        
+.items-1
+    grid-column: 2 / 4
+    grid-row: 1 / 2 
+    position: relative
+    overflow: hidden
+    @include respond (tab-port)
+        grid-column: 2 / 6
+        grid-row: 1 / 3
+    &__img
+        width: 31rem
+        height: 31rem
+        transition: all 1s
+        @include respond (tab-port)
+            width: 100%
+            height: 50rem
+    &__text
+        position: absolute
+        top: 25%
+        left: 50%
+        transform: translate(-70%,-40%)
+        font-size: 1.5rem
+        font-weight: bold
+        font-family: $font-raleway
+        color: white
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        opacity: 0
+        transition: all .5s
+    &__span
+        color: yellow
+        font-size: 1.8rem
+        font-family: $font-raleway
+
+    &:hover &__text 
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover &__img
+        transform: scale(1.1)
+        filter: brightness(40%)
+
+//модельное окно    
+#popup
+    position: fixed
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    background-color: rgba(24, 24, 24, 0.597)
+    z-index: 1
+    opacity: 0
+    visibility: hidden 
+#popup:target
+        opacity: 1
+        visibility: visible
+
+.popup-inner
+    position: relative
+    top: 10%
+    left: 31%
+    transform: translate(-50%)
+    background: $color-white
+    max-width: 55rem
+    height: 55rem
+    display: flex
+    align-items: center
+    flex-direction: column
+    grid-gap: 2rem
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    -ms-transform: scale(0)
+    transition: all .5s ease
+    
+    @include respond (tab-land)
+        position: relative  
+        top: 4%
+        left: 31%
+        transform: translate(-50%)
+    @include respond (mini-phone)
+        position: relative
+        top: 4%
+        left: 17% 
+        transform: translateX()
+       
+.popup-img
+        width: 100%
+        height: 45rem
+
+#popup:target .popup-inner
+    transform: scale(1)
+                    
+
+.text-popup
+    margin-bottom: 1rem
+.btn-popup
+        position: relative
+        background-color: $color-yellow
+        width: 100%
+        grid-gap: .1rem
+        
+.details-popup
+        font-size: 1.4rem
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        color: $color-white
+        text-transform: uppercase
+        font-family: $font-raleway
+        width: 50%
+        text-align: center
+        display: block
+        float: left
+        transition: all .4s ease-in-out
+        border-right: .1rem solid rgba(219, 215, 189, 0.668)
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out
+        
+.close-popup
+        display: block
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        text-transform: uppercase
+        font-family: $font-raleway
+        font-size: 1.4rem
+        color: $color-white
+        text-align: center
+        transition: all .4s ease-in-out
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out
+
+//конец модельного окна                    
+    
+//model window start-2
+
+.items-2
+    grid-column: 4 / 6
+    grid-row: 1 / 2 
+    position: relative
+    overflow: hidden
+    @include respond (tab-port)
+        grid-column: 6 / 10
+        grid-row: 1 / 3 
+
+    &__img
+        height: 31rem
+        width: 31rem
+        transition: all 1s
+        @include respond (tab-port)
+            height: 50rem
+            width: 100%
+    &__text
+        position: absolute
+        top: 25%
+        left: 50%
+        transform: translate(-70%, -40%)
+        font-family: $font-raleway
+        font-size: 1.5rem
+        font-weight: bold
+        color: white
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        opacity: 0
+        transition: all .5s
+
+    &__span
+        color: yellow
+        font-size: 1.8rem
+        font-family: $font-raleway
+
+    &:hover &__text 
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover &__img
+        transform: scale(1.1)
+        filter: brightness(40%) 
+
+#popup2
+    position: fixed
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    background-color: rgba(24, 24, 24, 0.597)
+    z-index: 1
+    opacity: 0
+    visibility: hidden 
+#popup2:target
+        opacity: 1
+        visibility: visible
+
+
+.popup-img2
+        width: 100%
+        height: 35rem
+#popup2:target .popup-inner
+    transform: scale(1)
+                   
+
+.text-popup
+    //margin-bottom: 1rem
+.btn-popup
+        position: relative
+        background-color: $color-yellow
+        width: 100%
+        grid-gap: .1rem
+        
+.details-popup
+        font-size: 1.4rem
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        color: $color-white
+        text-transform: uppercase
+        font-family: $font-raleway
+        width: 50%
+        text-align: center
+        display: block
+        float: left
+        transition: all .4s ease-in-out
+        border-right: .1rem solid rgba(219, 215, 189, 0.668)
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out
+        
+.close-popup
+        display: block
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        text-transform: uppercase
+        font-family: $font-raleway
+        font-size: 1.4rem
+        color: $color-white
+        text-align: center
+        transition: all .4s ease-in-out
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out          
+ 
+.items-3
+    grid-column: 6 / 8
+    grid-row: 1 / 2 
+    position: relative
+    overflow: hidden 
+    @include respond (tab-port)
+        grid-column: 2 / 6
+        grid-row: 3 / 4
+    &__img
+        height: 31rem
+        width: 31rem
+        transition: all 1s
+        @include respond (tab-port)
+            height: 50rem
+            width: 100%
+
+
+    &__text
+        position: absolute
+        top: 25%
+        left: 50%
+        transform: translate(-70%, -40%)
+        font-family: $font-raleway
+        font-size: 1.5rem
+        font-weight: bold
+        color: white
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        opacity: 0
+        transition: all .5s
+
+    &__span
+        color: yellow
+        font-size: 1.8rem
+        font-family: $font-raleway
+
+    &:hover &__text 
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover &__img
+        transform: scale(1.1)
+        filter: brightness(40%) 
+
+#popup3
+    position: fixed
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    background-color: rgba(24, 24, 24, 0.597)
+    z-index: 1
+    opacity: 0
+    visibility: hidden 
+#popup3:target
+        opacity: 1
+        visibility: visible
+
+
+.popup-img3
+        width: 100%
+        height: 35rem
+
+#popup3:target .popup-inner
+    transform: scale(1)
+                   
+
+.text-popup
+    padding: .5rem
+    margin-bottom: 1rem
+.btn-popup
+        position: relative
+        background-color: $color-yellow
+        width: 100%
+        grid-gap: .1rem
+        
+.details-popup
+        font-size: 1.4rem
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        color: $color-white
+        text-transform: uppercase
+        font-family: $font-raleway
+        width: 50%
+        text-align: center
+        display: block
+        float: left
+        transition: all .4s ease-in-out
+        border-right: .1rem solid rgba(219, 215, 189, 0.668)
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out
+        
+.close-popup
+        display: block
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        text-transform: uppercase
+        font-family: $font-raleway
+        font-size: 1.4rem
+        color: $color-white
+        text-align: center
+        transition: all .4s ease-in-out
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out                     
+        
+         
+.items-4
+    grid-column: 8 / 10
+    grid-row: 1 / 2 
+    position: relative
+    overflow: hidden 
+    @include respond (tab-port)
+        grid-column: 6 / 10
+        grid-row: 3 / 4
+    &__img
+        height: 31rem
+        width: 31rem
+        transition: all 1s
+        @include respond (tab-port)
+            height: 50rem
+            width: 100%
+
+
+    &__text
+        position: absolute
+        top: 25%
+        left: 50%
+        transform: translate(-70%, -40%)
+        font-size: 1.5rem
+        font-family: $font-raleway
+        font-weight: bold
+        color: white
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        opacity: 0
+        transition: all .5s
+
+    &__span
+        color: yellow
+        font-size: 1.8rem
+        font-family: $font-raleway
+        
+
+    
+
+
+    &:hover &__text 
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover &__img
+        transform: scale(1.1)
+        filter: brightness(40%)
+
+#popup4
+    position: fixed
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    background-color: rgba(24, 24, 24, 0.597)
+    z-index: 1
+    opacity: 0
+    visibility: hidden 
+#popup4:target
+        opacity: 1
+        visibility: visible
+
+
+.popup-img4
+        width: 100%
+        height: 35rem
+
+#popup4:target .popup-inner
+    transform: scale(1)
+                   
+
+.text-popup
+    margin-bottom: 1rem
+.btn-popup
+        position: relative
+        background-color: $color-yellow
+        width: 100%
+        grid-gap: .1rem
+        
+.details-popup
+        font-size: 1.4rem
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        color: $color-white
+        text-transform: uppercase
+        font-family: $font-raleway
+        width: 50%
+        text-align: center
+        display: block
+        float: left
+        transition: all .4s ease-in-out
+        border-right: .1rem solid rgba(219, 215, 189, 0.668)
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out
+        
+.close-popup
+        display: block
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        text-transform: uppercase
+        font-family: $font-raleway
+        font-size: 1.4rem
+        color: $color-white
+        text-align: center
+        transition: all .4s ease-in-out
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out                   
+        
+
+.items-5
+    grid-column: 2 / 4
+    grid-row: 2 / 3 
+    position: relative
+    overflow: hidden
+    @include respond (tab-port)
+        grid-column: 2 / 6
+        grid-row: 4 / 5
+    &__img
+        width: 31rem
+        height: 31rem
+        transition: all 1s
+        @include respond (tab-port)
+            height: 50rem
+            width: 100%
+    &__text
+        position: absolute
+        top: 25%
+        left: 50%
+        transform: translate(-70%,-40%)
+        font-size: 1.5rem
+        font-weight: bold
+        font-family: $font-raleway
+        color: white
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        opacity: 0
+        transition: all .5s
+    &__span
+        color: yellow
+        font-size: 1.8rem
+        font-family: $font-raleway
+
+    &:hover &__text 
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover &__img
+        transform: scale(1.1)
+        filter: brightness(40%)             
+               
+
+#popup5
+    position: fixed
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    background-color: rgba(24, 24, 24, 0.597)
+    z-index: 1
+    opacity: 0
+    visibility: hidden 
+#popup5:target
+        opacity: 1
+        visibility: visible
+
+
+.popup-img
+        width: 100%
+        height: 40rem
+
+#popup5:target .popup-inner
+    transform: scale(1)
+                   
+
+.text-popup
+    margin-bottom: 1rem
+.btn-popup
+        position: relative
+        background-color: $color-yellow
+        width: 100%
+        grid-gap: .1rem
+        
+.details-popup
+        font-size: 1.4rem
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        color: $color-white
+        text-transform: uppercase
+        font-family: $font-raleway
+        width: 50%
+        text-align: center
+        display: block
+        float: left
+        transition: all .4s ease-in-out
+        border-right: .1rem solid rgba(219, 215, 189, 0.668)
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out
+        
+.close-popup
+        display: block
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        text-transform: uppercase
+        font-family: $font-raleway
+        font-size: 1.4rem
+        color: $color-white
+        text-align: center
+        transition: all .4s ease-in-out
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out    
+   
+.items-6
+    grid-column: 4 / 6
+    grid-row: 2 / 3 
+    position: relative
+    overflow: hidden
+    @include respond (tab-port)
+        grid-column: 6 / 10
+        grid-row: 4 / 5
+    &__img
+        width: 31rem
+        height: 31rem
+        transition: all 1s
+        @include respond (tab-port)
+            height: 50rem
+            width: 100%
+    &__text
+        position: absolute
+        top: 25%
+        left: 50%
+        transform: translate(-70%,-40%)
+        font-size: 1.5rem
+        font-weight: bold
+        font-family: $font-raleway
+        color: white
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        opacity: 0
+        transition: all .5s
+    &__span
+        color: yellow
+        font-size: 1.8rem
+        font-family: $font-raleway
+
+    &:hover &__text 
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover &__img
+        transform: scale(1.1)
+        filter: brightness(40%)        
+       
+#popup6
+    position: fixed
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    background-color: rgba(24, 24, 24, 0.597)
+    z-index: 1
+    opacity: 0
+    visibility: hidden 
+#popup6:target
+        opacity: 1
+        visibility: visible
+
+
+.popup-img
+        width: 100%
+        height: 40rem
+
+#popup6:target .popup-inner
+    transform: scale(1)
+                   
+
+.text-popup
+    margin-bottom: 1rem
+.btn-popup
+        position: relative
+        background-color: $color-yellow
+        width: 100%
+        grid-gap: .1rem
+        
+.details-popup
+        font-size: 1.4rem
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        color: $color-white
+        text-transform: uppercase
+        font-family: $font-raleway
+        width: 50%
+        text-align: center
+        display: block
+        float: left
+        transition: all .4s ease-in-out
+        border-right: .1rem solid rgba(219, 215, 189, 0.668)
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out
+        
+.close-popup
+        display: block
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        text-transform: uppercase
+        font-family: $font-raleway
+        font-size: 1.4rem
+        color: $color-white
+        text-align: center
+        transition: all .4s ease-in-out
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out        
+        
+.items-7
+    grid-column: 6 / 8
+    grid-row: 2 / 3 
+    position: relative
+    overflow: hidden
+    @include respond (tab-port)
+        grid-column: 2 / 6
+        grid-row: 5 / -1
+    &__img
+        width: 31rem
+        height: 31rem
+        transition: all 1s
+        @include respond (tab-port)
+            height: 50rem
+            width: 100%
+    &__text
+        position: absolute
+        top: 25%
+        left: 50%
+        transform: translate(-70%,-40%)
+        font-size: 1.5rem
+        font-weight: bold
+        font-family: $font-raleway
+        color: white
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        opacity: 0
+        transition: all .5s
+    &__span
+        color: yellow
+        font-size: 1.8rem
+        font-family: $font-raleway
+
+    &:hover &__text 
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover &__img
+        transform: scale(1.1)
+        filter: brightness(40%)            
+
+#popup7
+    position: fixed
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    background-color: rgba(24, 24, 24, 0.597)
+    z-index: 1
+    opacity: 0
+    visibility: hidden 
+#popup7:target
+        opacity: 1
+        visibility: visible
+
+
+.popup-img7
+        width: 100%
+        height: 35rem
+
+#popup7:target .popup-inner
+    transform: scale(1)
+                   
+
+.text-popup
+    margin-bottom: 1rem
+.btn-popup
+        position: relative
+        background-color: $color-yellow
+        width: 100%
+        grid-gap: .1rem
+        
+.details-popup
+        font-size: 1.4rem
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        color: $color-white
+        text-transform: uppercase
+        font-family: $font-raleway
+        width: 50%
+        text-align: center
+        display: block
+        float: left
+        transition: all .4s ease-in-out
+        border-right: .1rem solid rgba(219, 215, 189, 0.668)
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out
+        
+.close-popup
+        display: block
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        text-transform: uppercase
+        font-family: $font-raleway
+        font-size: 1.4rem
+        color: $color-white
+        text-align: center
+        transition: all .4s ease-in-out
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out               
+
+.items-8
+    grid-column: 8 / 10
+    grid-row: 2 / 3
+    position: relative
+    overflow: hidden
+    @include respond (tab-port)
+        grid-column: 6 / 10
+        grid-row: 5 / -1
+    &__img
+        width: 31rem
+        height: 31rem
+        transition: all 1s
+        @include respond (tab-port)
+            height: 50rem
+            width: 100%
+    &__text
+        position: absolute
+        top: 25%
+        left: 50%
+        transform: translate(-70%,-40%)
+        font-size: 1.5rem
+        font-weight: bold
+        font-family: $font-raleway
+        color: white
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        opacity: 0
+        transition: all .5s
+    &__span
+        color: yellow
+        font-size: 1.8rem
+        font-family: $font-raleway
+
+    &:hover &__text 
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover &__img
+        transform: scale(1.1)
+        filter: brightness(40%)            
+          
+#popup8
+    position: fixed
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    background-color: rgba(24, 24, 24, 0.597)
+    z-index: 1
+    opacity: 0
+    visibility: hidden 
+#popup8:target
+        opacity: 1
+        visibility: visible
+
+
+.popup-img8
+        width: 100%
+        height: 35rem
+
+#popup8:target .popup-inner
+    transform: scale(1)
+                   
+
+.text-popup
+    margin-bottom: 1rem
+.btn-popup
+        position: relative
+        background-color: $color-yellow
+        width: 100%
+        grid-gap: .1rem
+        
+.details-popup
+        font-size: 1.4rem
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        color: $color-white
+        text-transform: uppercase
+        font-family: $font-raleway
+        width: 50%
+        text-align: center
+        display: block
+        float: left
+        transition: all .4s ease-in-out
+        border-right: .1rem solid rgba(219, 215, 189, 0.668)
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out
+        
+.close-popup
+        display: block
+        padding: 2.2rem
+        background-color: $color-black
+        text-decoration: none
+        text-transform: uppercase
+        font-family: $font-raleway
+        font-size: 1.4rem
+        color: $color-white
+        text-align: center
+        transition: all .4s ease-in-out
+        letter-spacing: .3rem
+        &:hover
+                color: $color-black
+                cursor: pointer
+                background-color: $color-yellow
+                transition: all .5s ease-in-out
+        
+ 
+    
+    
+            

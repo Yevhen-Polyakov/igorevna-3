@@ -1,0 +1,63 @@
+$color-yellow: #fdc501
+$color-blue-dark: #12151B
+$color-gray: #575859
+$color-white: #fff
+$color-orange-red: rgb(230, 81, 18)
+$color-black: #000000
+$color-black-blue: #111417
+
+$font-raleway: 'Raleway', sans-serif    
+$font-marriwether: 'Merriweather', serif
+
+@mixin respond($breakpoint)
+    @if $breakpoint == mini-phone
+        @media screen and ( max-width: 597px )
+            @content            
+
+    @if $breakpoint == phone
+        @media only screen and ( max-width: 680px )
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and ( max-width: 873px )
+            @content        
+             
+    @if $breakpoint == tab-land
+        @media only screen and ( max-width: 1250px )
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and ( max-width: 1800px )
+            @content   
+
+
+
+
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+html
+    font-size: 62.5%
+    @include respond (tab-land)
+        font-size: 50%
+    @include respond (tab-port)
+        font-size: 40%
+    @include respond (mini-phone)
+        font-size: 35% 
+body
+    font-size: 1.6rem
+    font-family: $font-marriwether
+    
+
+.containers
+    display: grid
+    grid-template-rows: 90vh min-content repeat(4, min-content) min-content  min-content     
+    grid-template-columns: minmax(6rem, 1fr) repeat(9, minmax(min-content, 14rem)) minmax(6rem, 1fr)
+    @include respond (tab-land)
+        grid-template-rows: 40vh min-content repeat(4, min-content) min-content  min-content     
+    grid-template-columns: minmax(6rem, 1fr) repeat(9, minmax(min-content, 14rem)) minmax(6rem, 1fr)
+

@@ -1,0 +1,22 @@
+.text-info
+    background-color: $color-blue-dark
+    grid-column: 1 / -1
+    display: grid
+    grid-template-rows: repeat(3, min-content)
+
+.line-anime
+    display: inline
+
+.line-anime::after
+    content: ""
+    display: block
+    height: .3rem
+    width: 1rem
+    background: grey
+    transition: width .5s ease, background-color .5s ease
+
+
+.line-anime:hover::after
+    content: ""
+    width: 80%
+    background: $color-yellow

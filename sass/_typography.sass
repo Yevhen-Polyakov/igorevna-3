@@ -1,0 +1,106 @@
+.tittle-1
+    font-size: 4.9rem
+    text-shadow: 0 .1rem .2rem rgba(0, 0, 0, 0.6)
+    color: $color-white
+    &__main
+        display: block
+        animation: ToptoBottom
+        animation-duration: 1.5s 
+    &__line
+        display: block
+        border-bottom: .3rem solid
+        color: $color-yellow
+        margin: 2rem 0 3rem 0
+        width: 14rem
+              
+.tittle-2
+    font-size: 2.5rem
+    font-family: $font-raleway
+    color: $color-white
+    text-transform: uppercase
+    letter-spacing: .2rem
+    margin: 20rem 0 5rem 15rem 
+    
+.tittle-3
+    font-size: 2rem
+    color: #646060e6
+    letter-spacing: .2rem
+    margin-bottom: 11rem
+    font-family: 
+    
+    &__first
+        display: block
+        animation: BottomtoTop
+        animation-duration: 1.5s
+
+.tittle-4
+    font-size: 1.8rem
+    color: $color-yellow
+    text-transform: none
+    margin-bottom: .6rem 
+    margin-top: 1rem
+    font-family: $font-raleway
+
+.tittle-5
+    color: $color-white
+    font-family: $font-marriwether
+    font-size: 1.3rem 
+    margin-bottom: 3rem   
+
+.tittle-6
+    font-size: 1.6rem
+    color: $color-white
+    font-family: $font-raleway
+    margin-left: 4rem    
+
+.dot
+    color: $color-yellow   
+
+.line-anime
+    display: inline
+    
+
+.line-anime::after
+    content: ""
+    margin-top: 3rem
+    margin-bottom: 4rem
+    display: block
+    height: .3rem
+    width: 14rem
+    background: #283436
+    transition: width .5s ease, background-color .5s ease
+
+
+.line-anime:hover::after
+    content: ""
+    width: 25%
+    background: $color-yellow
+          
+    
+.margin-left-200
+    margin-left: 15rem   
+
+.margin-bottom-30
+    margin-bottom: 3rem    
+
+
+
+@keyframes ToptoBottom
+    0%
+        opacity: 0
+        transform: translateY(-30rem)
+        
+    100%
+        opacity: 1
+        transform: translateY(0rem)
+             
+
+@keyframes BottomtoTop
+    0%
+        opacity: 0
+        transform: translateY(15rem)
+        
+    100%
+        opacity: 1
+        transform: translateY(0rem)
+                     

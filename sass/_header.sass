@@ -1,0 +1,242 @@
+.header
+    
+    background: linear-gradient(117deg, rgba(14,10,4,0.5114496482186625) 100%, rgba(255,255,255,0.7999650543811274) 100%), url(../img/BG_fon.jpg) center / cover no-repeat
+    grid-column: 1 / -1
+    display: grid
+    grid-template-rows: repeat(3, min-content)
+    
+    
+    
+.logo-nav
+    width: 17rem
+    height: 17rem
+    transition: all .2s
+    &:hover
+        transform: scale(1.1)
+    @include respond (tab-port)
+        width: 14rem
+        height: 14rem 
+    
+
+   
+.nav
+    position: fixed
+    top: 0
+    left: 0
+    display: grid
+    grid-row: 1 / 2
+    grid-column: 1 / -1
+    grid-template-columns: repeat(8, 1fr)
+    grid-template-rows: 7.3rem min-content
+    background-color: #c5a0a054
+    margin-bottom: 18rem  
+    z-index: 5
+    
+
+    &__logo
+        //background-color: $color-yellow
+        width: 14rem
+        height: 7rem
+        text-align: center
+        padding: .5rem
+        grid-column: 2 / 3
+        margin-right: 4rem
+        
+        
+
+
+    &__logo-text
+        font-size: 2rem
+        font-family: $font-raleway
+        font-weight: bold
+        text-decoration: none
+        text-transform: uppercase
+        color: $color-black 
+        letter-spacing: .5rem
+
+
+
+    &__box
+        display: flex
+        list-style: none
+        grid-gap: 3rem
+        padding-top: 2rem
+        @include respond (mini-phone)
+            display: none
+        
+    &__link  
+        &:link, &:visited
+            font-size: 1.8rem
+            font-family: $font-raleway
+            font-weight: bold
+            color: $color-white
+            text-transform: uppercase
+            text-decoration: none
+            transform: .3s all
+            display: inline-block
+        &:hover, &:active
+            color: $color-yellow
+            transform: translateY(-.3rem)
+
+    &__border
+        border-right: .1rem solid
+        color: #ffffff
+        text-align: center
+        margin-right: 4rem
+        @include respond (mini-phone)
+            display: none
+
+.header > h1 
+    margin-top: 30rem
+
+//burger 
+
+.burger
+    position: absolute
+    left: 50%
+    top: 15%
+    display: none 
+    @include respond (mini-phone)
+        display: block
+.menu 
+    border-radius: 1rem
+    list-style: none
+    position: absolute
+    width: auto
+    height: auto
+    top: 2.5rem
+    left: -1rem
+    margin-top: 5.2rem
+    padding: 1rem
+    clear: both
+    background: var(--background-navbar)
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s
+    transform: scale(1, 0)
+    transform-origin: top
+    background-color: #5b4545dd
+
+/* Hamburger menu button */
+.menu-btn:checked ~ .menu 
+    transform: scale(1, 1)
+    transform-origin: top
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s
+
+
+/* Hamburger menbu text */
+.menu a 
+    text-decoration: none
+    font-weight: bold
+    font-family: $font-raleway
+    letter-spacing: .2rem
+    font-size: 2.5rem
+    text-transform: capitalize
+    color: #ddd
+    opacity: 0
+    transition: all .5s ease out
+    &:hover
+        color: $color-yellow
+        
+
+
+    
+
+
+.menu-btn:checked ~ .menu a,
+.menu-btn:checked ~ .menu li 
+    opacity: 1
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s
+
+
+.menu-btn 
+    display: none
+
+
+.menu-icon 
+    display: block
+    position: absolute
+
+    cursor: pointer
+    padding: 2.4rem 1.4rem
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+
+.navicon 
+    background: #ddd
+    display: block
+    height: .5rem
+    width: 5rem
+    position: relative
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s
+
+
+.navicon:before,
+.navicon:after 
+    content: ""
+    display: block
+    height: 100%
+    width: 100%
+    position: absolute
+    background: #ddd
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s
+
+
+.navicon:before 
+    top: 1.5rem
+
+
+.navicon:after 
+    bottom: 1.5rem
+
+
+/* Hamburger Menu Animation Start */
+.menu-btn:checked ~ .menu-icon .navicon:before 
+    transform: rotate(-45deg)
+
+
+.menu-btn:checked ~ .menu-icon .navicon:after 
+    transform: rotate(45deg)
+
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before 
+    top: 0
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after 
+    bottom: 0
+
+
+.menu-btn:checked ~ .menu-icon .navicon 
+    background: rgba(0, 0, 0, 0)
+    transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s
+
+/* Hamburger Menu Animation End */
+
+/* Navbar Container */
+.navtext-container 
+    width: 100%
+    height: 5.2rem
+    position: absolute
+    box-sizing: border-box
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+/* Navbar Text */
+.navtext 
+    position: absolute
+    text-transform: uppercase
+    color: #ddd
+    letter-spacing: .4rem
+    font-size: 2rem
+    
+            
+                
+                 
+
+
+   
+    
+    
+
+
+         
